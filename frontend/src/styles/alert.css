@@ -1,0 +1,209 @@
+.alert-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 26px;
+  padding: 26px 28px;
+  border-left: 3px solid var(--gold);
+}
+
+.alert-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(520px 190px at 96% 0%, color-mix(in srgb, var(--gold) 9%, transparent), transparent 70%),
+    radial-gradient(420px 200px at 30% 130%, color-mix(in srgb, var(--bad) 7%, transparent), transparent 68%);
+}
+
+.alert-kicker {
+  grid-column: 1 / -1;
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.alert-beacon {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: beacon 1.8s ease-in-out infinite;
+}
+
+.alert-main {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+}
+
+.alert-region {
+  margin-top: 10px;
+  font-family: 'Segoe UI Variable Display', 'Segoe UI', system-ui, sans-serif;
+  font-size: clamp(27px, 3.4vw, 40px);
+  font-weight: 750;
+  letter-spacing: -0.8px;
+  line-height: 1.05;
+}
+
+.alert-chips {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10.5px;
+  font-weight: 750;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: var(--chip-color, var(--accent));
+  border: 1px solid color-mix(in srgb, var(--chip-color, var(--accent)) 45%, transparent);
+  background: color-mix(in srgb, var(--chip-color, var(--accent)) 11%, transparent);
+}
+
+.chip.neutral {
+  color: var(--text-muted);
+  border-color: var(--border-strong);
+  background: var(--surface-2);
+}
+
+.alert-desc {
+  margin-top: 13px;
+  max-width: 58ch;
+  font-size: 13.5px;
+  line-height: 1.62;
+  color: var(--text-muted);
+}
+
+.alert-coords {
+  margin-top: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-family: ui-monospace, 'Cascadia Code', Consolas, monospace;
+  font-size: 12px;
+  color: var(--text-faint);
+}
+
+.alert-side {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.score-ring-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.score-ring {
+  position: relative;
+  width: 92px;
+  height: 92px;
+  flex: none;
+}
+
+.score-ring svg {
+  transform: rotate(-90deg);
+}
+
+.ring-track {
+  fill: none;
+  stroke: var(--border-strong);
+}
+
+.ring-fill {
+  fill: none;
+  stroke: url(#alertRing);
+  stroke-linecap: round;
+}
+
+.score-ring-center {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.score-ring-num {
+  font-family: 'Segoe UI Variable Display', 'Segoe UI', system-ui, sans-serif;
+  font-size: 22px;
+  font-weight: 750;
+  letter-spacing: -0.5px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.score-ring-cap {
+  margin-top: 3px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.score-caption {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.score-caption strong {
+  color: var(--text);
+}
+
+.factor-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 18px;
+}
+
+.factor-cell-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-bottom: 5px;
+}
+
+.factor-cell-value {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+}
+
+.meter {
+  height: 5px;
+  border-radius: 99px;
+  background: var(--border-strong);
+  overflow: hidden;
+  opacity: 0.65;
+}
+
+.meter > span {
+  display: block;
+  height: 100%;
+  border-radius: 99px;
+}
