@@ -1,0 +1,11 @@
+region,category,population,citizen_demand,infrastructure_gap,urgency,investment_gap,latitude,longitude
+Nagpur,Healthcare,720000,92,88,95,90,21.1458,79.0882
+Pune,Water,650000,84,91,88,82,18.5204,73.8567
+Nashik,Roads,580000,78,82,85,88,19.9975,73.7898
+Aurangabad,Education,490000,75,79,82,85,19.8762,75.3433
+Amravati,Healthcare,430000,81,86,90,92,20.9374,77.7796
+Kolhapur,Water,390000,73,80,79,83,16.7050,74.2433
+Solapur,Roads,610000,87,85,91,80,17.6599,75.9064
+Thane,Digital Connectivity,900000,69,74,70,76,19.2183,72.9781
+Satara,Education,350000,68,77,75,81,17.6805,74.0183
+Akola,Water,320000,79,89,87,94,20.7002,77.0082
