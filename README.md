@@ -9,7 +9,7 @@
 
 <p align="center">
   <a href="https://civicpulse-ai-c331d.web.app/">Live Demo</a> •
-  <a href="YOUR_VIDEO_URL">Demo Video</a> •
+  <a href="https://youtu.be/WVoiQ5ekzaI?feature=shared">Demo Video</a> •
   <a href="https://github.com/mariyashaikh-crypto/civicpulse-ai">Repository</a> •
   <a href="https://civicpulse-ai-63o1.onrender.com">Backend API</a>
 </p>
